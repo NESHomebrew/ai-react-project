@@ -44,3 +44,12 @@
   align-items: center;
   justify-content: center;
 }
+
+pre {
+  background-color: black;
+  color: green;
+  text-align: left;
+  margin: 0;
+  padding-left: 3em;
+  font-size: calc(1.8vmin);
+}

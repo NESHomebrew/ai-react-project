@@ -5,6 +5,6 @@ const configuration = new Configuration({
   apiKey: process.env.REACT_APP_OPENAI_API_KEY,
 });
 
-export default function openai() {
+export function openai() {
   return new OpenAIApi(configuration);
 }

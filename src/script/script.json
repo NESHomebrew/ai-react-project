@@ -1,0 +1,58 @@
+[
+  {
+    "before": "You've been hearing it in the news... what exactly is ChatGPT? I will let it answer the question for me.",
+    "prompt": "What is ChatGPT?",
+    "after": "Sure, that's great. But what happens if you ask it the same question?"
+  },
+  {
+    "before": "Let's try it again.",
+    "prompt": "What is ChatGPT?",
+    "after": "You see... similar. But different"
+  },
+  {
+    "before": "You may have seen sensational headlines about our jobs being replaced by AI.",
+    "prompt": "Is ChatGPT going to take my job?",
+    "after": "So, the short answer is no. Currently there is nothing to worry about."
+  },
+  {
+    "before": "Naturally your next question might be, does it create accurate results?",
+    "prompt": "Does chatgpt always give the right answers?",
+    "after": "Ahh, good to know. Never assume it is giving you the correct anser."
+  },
+  {
+    "before": "Let me give a couple of examples where ChatGPT will struggle.",
+    "prompt": "What is 5+5?",
+    "after": "Ok, that was easy."
+  },
+  {
+    "before": "Let's step it up a notch",
+    "prompt": "What is 5+5+5*5*5?",
+    "after": "You may have gotten the correct answer of 135, but more often it decides on 130 even though it successfully describes the method to get the right answer.",
+    "again": "Do you want to try this prompt again?"
+  },
+  {
+    "before": "Another weakness of the current model is the data it was trained on.",
+    "prompt": "Tell me the latest news.",
+    "after": "It is currently unable to provide information past 2021."
+  },
+  {
+    "before": "Can it do my homework? Let's try it out.",
+    "prompt": "Write a 5 sentance paragraph about the ethics of AI.",
+    "after": "That seemed pretty convincing."
+  },
+  {
+    "before": "What else is it good at?",
+    "prompt": "Write a limerick about a donkey and an ogre.",
+    "after": "Nice.",
+    "again": "Do you want to try this prompt again?"
+  },
+  {
+    "before": "What about code?",
+    "prompt": "Output a python script to send an email.",
+    "after": "Who knows if it works, but I'm sure it is a step in the right direction. "
+  },
+  {
+    "before": "In conclusion, is it a useful tool? Yes. Will it lead to widespread cheating? Probably.",
+    "options": ["Try it out yourself!"]
+  }
+]

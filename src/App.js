@@ -1,14 +1,17 @@
 import "./App.css";
+import ReactMarkdown from "react-markdown";
 import { SSE } from "sse";
 import { useState, useRef, useEffect } from "react";
-import openai from "./openai/openai";
+import Input from "./components/input";
+import ScriptReader from "./components/scriptReader";
 
 function App() {
   const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
-  const openAI = openai();
 
   const [inputValue, setValue] = useState("");
   const [result, setResult] = useState("");
+  const [mode, setMode] = useState("");
+  const [index, setIndex] = useState(0);
 
   const resultRef = useRef();
 
@@ -22,14 +25,13 @@ function App() {
 
   async function handleClick(e) {
     e.preventDefault();
+    console.log("entered");
     setResult("");
 
     if (inputValue !== "") {
-      // setIsLoading(true);
       let url = "https://api.openai.com/v1/chat/completions";
       let data = {
         model: "gpt-3.5-turbo",
-        // model: "text-davinci-003",
         messages: [{ role: "user", content: inputValue }],
         temperature: 0.75,
         top_p: 0.95,
@@ -51,10 +53,8 @@ function App() {
         if (e.data !== "[DONE]") {
           let payload = JSON.parse(e.data);
           let text = payload.choices[0].delta.content ?? "";
-          if (text !== "\n") {
-            resultRef.current = resultRef.current + text;
-            setResult(resultRef.current);
-          }
+          resultRef.current = resultRef.current + text;
+          setResult(resultRef.current);
         } else {
           source.close();
         }
@@ -62,7 +62,6 @@ function App() {
 
       source.addEventListener("readystatechange", (e) => {
         if (e.readyState >= 2) {
-          // setIsLoading(false);
         }
       });
 
@@ -72,21 +71,31 @@ function App() {
     }
   }
 
+  function updateValue(someValue) {
+    setValue(someValue);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <p>AI project - CS280 - Winter 2023</p>
         <p>Bradley Bateman</p>
       </header>
-      <form>
-        <input
-          id="input-box"
-          type="text"
-          onChange={handleChange}
-          value={inputValue}
-        ></input>
-        <button onClick={handleClick}>Send</button>
-      </form>
+
+      <ScriptReader
+        index={index}
+        setIndex={setIndex}
+        setMode={setMode}
+        setValue={updateValue}
+        handleClick={handleClick}
+      />
+      {mode === "input" && (
+        <Input
+          handleChange={handleChange}
+          inputValue={inputValue}
+          handleClick={handleClick}
+        />
+      )}
 
       <div
         style={{
@@ -96,7 +105,7 @@ function App() {
           paddingRight: "10vw",
         }}
       >
-        <p>{result}</p>
+        <ReactMarkdown>{result}</ReactMarkdown>
       </div>
     </div>
   );
