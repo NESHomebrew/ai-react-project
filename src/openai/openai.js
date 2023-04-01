@@ -1,7 +1,7 @@
 import { Configuration, OpenAIApi } from "openai";
 
-const configuration = new Configuration({
-  organization: "org-Lu5Lwe4u0bimIIXSOvaqlxGS",
+export const configuration = new Configuration({
+  organization: process.env.REACT_APP_OPENAI_ORG,
   apiKey: process.env.REACT_APP_OPENAI_API_KEY,
 });
 
