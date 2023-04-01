@@ -10,7 +10,7 @@ The web-based version of the application is available at https://neshomebrew.git
 
 - **NOTE:** due to security limitations the web-version is currently unable to access the ChatGPT API. The current available node sdk does not provide a secure method of communication and appropriately any attempt to pass an exposed token in the Auth header leads to immeadiate revocation of said token. A branch was started to move these requests server-side, but could not be completed.
 
-Because of this unfortunate occurance I have captured a small demo to showcase the functionality.
+Because of this unfortunate occurance I have captured a small demo to showcase the functionality: https://youtu.be/cBDIEwuelpE
 
 ## Local Instructions
 
