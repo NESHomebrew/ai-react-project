@@ -1,4 +1,5 @@
 import "./App.css";
+import ScriptReader from "./components/scriptReader";
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
         <p>AI project - CS280 - Winter 2023</p>
         <p>Bradley Bateman</p>
       </header>
+      <div className="Content">
+        <ScriptReader />
+      </div>
     </div>
   );
 }
