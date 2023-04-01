@@ -1,8 +1,8 @@
 import Fade from "./fade";
 
-export default function Next({ fade, startFade }) {
+export default function Next({ startFade }) {
   return (
-    <button type="button" onClick={startFade}>
+    <button type="button" onClick={(e) => startFade(e)}>
       Next
     </button>
   );

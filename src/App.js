@@ -1,6 +1,4 @@
 import "./App.css";
-import Input from "./components/input";
-import Output from "./components/output";
 import ScriptReader from "./components/scriptReader";
 
 function App() {
@@ -12,8 +10,6 @@ function App() {
       </header>
       <div className="Content">
         <ScriptReader />
-        <Input />
-        <Output />
       </div>
     </div>
   );

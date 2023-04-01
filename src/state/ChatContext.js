@@ -9,7 +9,7 @@ export function useChat() {
 
 export function ChatProvider({ children }) {
   const [index, setIndex] = useState(0);
-  const [mode, setMode] = useState("start");
+  const [mode, setMode] = useState("default");
   const [currentStep, setStep] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -25,8 +25,10 @@ export function ChatProvider({ children }) {
       setMode("options");
     } else if (object.again) {
       setMode("again");
-    } else if (index === 0) {
-      setMode("start");
+      // } else if (index === 0) {
+      //   setMode("start");
+    } else {
+      setMode("default");
     }
   }, [currentStep]);
 

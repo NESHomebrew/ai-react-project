@@ -1,11 +1,11 @@
 .fade-in-text {
   font-family: Arial;
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
 }
 
 .fade-out-text {
   font-family: Arial;
-  animation: fadeOut 2s;
+  animation: fadeOut 1s;
 }
 
 @keyframes fadeIn {
