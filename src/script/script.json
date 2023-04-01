@@ -7,7 +7,7 @@
   {
     "before": "Let's try it again.",
     "prompt": "What is ChatGPT?",
-    "after": "You see... similar. But different"
+    "after": "You see... similar. But different. There are various parameters that can be set in the background which will affect the similarity of responses."
   },
   {
     "before": "You may have seen sensational headlines about our jobs being replaced by AI.",

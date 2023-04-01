@@ -65,15 +65,16 @@ export function APIProvider({ children }) {
     }
   }
 
-  function submitRequest(message) {
+  async function submitRequest(message) {
     console.log("Message:", message);
-    setResult("");
+    await setResult("");
     apiHelper(message);
     setResult(result);
   }
 
   const value = {
     result,
+    setResult,
     submitRequest,
   };
 
