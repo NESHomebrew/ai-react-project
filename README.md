@@ -19,6 +19,9 @@ Because of this unfortunate occurance I have captured a small demo to showcase t
 - npm
 - create-react-app
 - your own org/access-token https://platform.openai.com/account/api-keys
+- a .env file must be created in the root directory with the following two ENV variables
+  - REACT_APP_OPENAI_API_KEY=`<YOUR_API_KEY>`
+  - REACT_APP_OPENAI_ORG=`<YOUR_OPENAI_ORG>`
 
 ### `npm install`
 
