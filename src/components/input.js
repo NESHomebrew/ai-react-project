@@ -1,4 +1,22 @@
-export default function Input({ handleChange, inputValue, handleClick }) {
+import { useState } from "react";
+import { useAPI } from "../state/APIContext";
+
+export default function Input({}) {
+  const { submitRequest, setResult } = useAPI();
+  const [inputValue, setValue] = useState("");
+
+  function handleClick(e) {
+    e.preventDefault();
+    setResult("");
+    submitRequest(inputValue);
+  }
+
+  function handleChange(e) {
+    e.preventDefault();
+
+    setValue(e.target.value);
+  }
+
   return (
     <form>
       <input
