@@ -1,23 +1,34 @@
-# Getting Started with Create React App
+# CS280 - Winter 2023 - Bradley Bateman
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Assignment #4
 
-## Available Scripts
+For my final assignment I have decided to experiment with the newly available ChatGPT 3.5 API. With the topic of AI being heard everywhere these days, I thought it would be useful to create a little application that would explain and demonstrate the capabilites of ChatGPT, as well as enable the user to try it out without having to sign up for a service.
 
-In the project directory, you can run:
+## URL
+
+The web-based version of the application is available at https://neshomebrew.github.io/ai-react-project/
+
+- **NOTE:** due to security limitations the web-version is currently unable to access the ChatGPT API. The current available node sdk does not provide a secure method of communication and appropriately any attempt to pass an exposed token in the Auth header leads to immeadiate revocation of said token. A branch was started to move these requests server-side, but could not be completed.
+
+Because of this unfortunate occurance I have captured a small demo to showcase the functionality.
+
+## Local Instructions
+
+### `Requirements`
+
+- npm
+- create-react-app
+- your own org/access-token https://platform.openai.com/account/api-keys
+
+### `npm install`
+
+This will add all the necessary dependencies to run the application.
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It should launch a browser window automatically.
+If not, open [http://localhost:3000/ai-react-project](http://localhost:3000/ai-react-project) to view it in your browser.
 
 ### `npm run build`
 
@@ -29,42 +40,16 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run deploy`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project uses gh-pages (github pages) to deploy to github. Running this command will push the current branch to the remote [gh-pages](https://github.com/NESHomebrew/ai-react-project/tree/gh-pages) branch and will deploy a production build.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+More information is available here: https://github.com/gitname/react-gh-pages
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
-## Learn More
+This software is "licensed" with the [UN-LICENSE](LICENSE.md)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In the spirit of open-source you are free to do whatever you want with the code with no liability or promises on my behalf.
