@@ -1,5 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import script from "../script/script.json";
+import PropTypes from "prop-types";
+
+ChatProvider.PropTypes = {
+  children: PropTypes.node,
+};
 
 const ChatContext = React.createContext();
 
@@ -7,7 +12,8 @@ export function useChat() {
   return useContext(ChatContext);
 }
 
-export function ChatProvider({ children }) {
+export function ChatProvider() {
+  const { children } = this.props;
   const [index, setIndex] = useState(0);
   const [mode, setMode] = useState("default");
   const [currentStep, setStep] = useState({});

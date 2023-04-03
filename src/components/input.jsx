@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAPI } from "../state/APIContext";
 
-export default function Input({}) {
+export default function Input() {
   const { submitRequest, setResult } = useAPI();
   const [inputValue, setValue] = useState("");
 
