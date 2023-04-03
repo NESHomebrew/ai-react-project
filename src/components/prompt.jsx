@@ -11,8 +11,7 @@ export default function Prompt({ text }) {
   const { submitRequest } = useAPI();
 
   useEffect(() => {
-    const result = () => submitRequest(text);
-    return result;
+    submitRequest(text);
   }, [text]);
 
   return <div className="Prompt">{text}</div>;
