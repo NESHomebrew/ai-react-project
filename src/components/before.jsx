@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 Before.propTypes = {
+  props: PropTypes.any,
   text: PropTypes.string,
 };
 

@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import { useAPI } from "../state/APIContext";
 import PropTypes from "prop-types";
 
-Prompt.PropTypes = {
+Prompt.propTypes = {
+  props: PropTypes.any,
   text: PropTypes.string,
 };
 
-export default function Prompt() {
+export default function Prompt({ text }) {
   const { submitRequest } = useAPI();
-  const { text } = this.props;
 
   useEffect(() => {
     const result = () => submitRequest(text);

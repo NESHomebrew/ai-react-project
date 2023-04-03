@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-export default function After() {
-  const { text } = this.props;
-  return <div className="AfterText">{text}</div>;
-}
-
-After.PropTypes = {
+After.propTypes = {
+  props: PropTypes.any,
   text: PropTypes.string,
 };
+
+export default function After({ text }) {
+  return <div className="AfterText">{text}</div>;
+}

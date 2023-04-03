@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-Next.PropTypes = {
+Next.propTypes = {
+  props: PropTypes.any,
   startFade: PropTypes.func,
 };
 
-export default function Next() {
-  const { startFade } = this.props;
+export default function Next({ startFade }) {
   return (
     <button type="button" onClick={(e) => startFade(e)}>
       Next

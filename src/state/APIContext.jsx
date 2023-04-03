@@ -2,7 +2,8 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import { SSE } from "sse";
 import PropTypes from "prop-types";
 
-APIProvider.PropTypes = {
+APIProvider.propTypes = {
+  props: PropTypes.any,
   children: PropTypes.node,
 };
 
@@ -12,8 +13,7 @@ export function useAPI() {
   return useContext(APIContext);
 }
 
-export function APIProvider() {
-  const { children } = this.props;
+export function APIProvider({ children }) {
   const [result, setResult] = useState("");
 
   const resultRef = useRef();
@@ -62,7 +62,7 @@ export function APIProvider() {
 
       source.addEventListener("readystatechange", (e) => {
         if (e.readyState >= 2) {
-          console.log(e.readyState);
+          console.info(e.readyState);
         }
       });
 
