@@ -74,9 +74,8 @@ export function APIProvider({ children }) {
 
   async function submitRequest(message) {
     console.log("Message:", message);
-    await setResult("");
     apiHelper(message);
-    setResult(result);
+    resultRef.current = "";
   }
 
   const value = {

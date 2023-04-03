@@ -24,7 +24,7 @@ export default function ScriptReader() {
     await timeout(1000);
     increment();
     setFade("in");
-    await timeout(1000);
+    await timeout(1500);
   }
 
   return (
