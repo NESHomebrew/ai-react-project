@@ -17,5 +17,9 @@ jobs:
     steps:
     - id: build-publish
       uses: bitovi/github-actions-react-to-ghp@v1.2.0
+      env:
+        REACT_APP_OPENAI_API_KEY: "${{ secrets.REACT_APP_OPENAI_API_KEY }}"
+        REACT_APP_OPENAI_ORG: "${{ secrets.REACT_APP_OPENAI_ORG }}"
       with:
         path: build # change to your build folder
+      
