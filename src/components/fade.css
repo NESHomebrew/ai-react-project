@@ -1,6 +1,6 @@
 .fade-in-text {
   font-family: Arial;
-  animation: fadeIn 1s;
+  animation: fadeIn 0.9s;
 }
 
 .fade-out-text {

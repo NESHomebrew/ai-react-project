@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 Options.propTypes = {
   props: PropTypes.any,
-  text: PropTypes.string,
+  text: PropTypes.array,
 };
 
 export default function Options({ text }) {
